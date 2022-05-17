@@ -1,0 +1,16 @@
+<button id="copybtn" onclick="copyToClipboard('01034017680');" title="복사하기">복사하기</button>
+<script>
+    function copyToClipboard(val) {
+    var t = document.createElement("textarea");
+    document.body.appendChild(t);
+    t.value = val;
+    t.select();
+    document.execCommand('copy');
+    document.body.removeChild(t);
+    }
+
+    $('#copybtn1').click(function() {
+      copyToClipboard('01034017680');
+      alert('복사하였습니다');
+    });
+  </script>
